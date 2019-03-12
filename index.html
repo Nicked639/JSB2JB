@@ -201,8 +201,7 @@
 	var url = location.search;
 	if (url.indexOf("?") !=-1) {
 		qrurl = qrurl + "&" + url.substring(1);
-		    var obj = document.getElementById("p");
-    obj.innerHTML= "正在通过 JSBox 打开 JavBus 欣赏 "+ url.substring(1).replace("code=","");
+		  
     }
     if (is_weixin()) {        
         if (typeof WeixinJSBridge == "undefined") {            
