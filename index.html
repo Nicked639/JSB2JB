@@ -7,7 +7,7 @@
     <title>正在打开 JavBus...</title>
 </head>
 <body>
-	<p>正在拉起 JSBox...</p>
+	<p>正在打开 JavBus...</p>
     <script>    
     var qrurl = "jsbox://run?name=JavBus";    
     function is_weixin() {        
@@ -86,7 +86,8 @@
 	var url = location.search;
 	if (url.indexOf("?") !=-1) {
 		qrurl = qrurl + "&" + url.substring(1);
-		document.title = 'url.substring(1)'
+		    var obj = document.getElementById("p");
+    obj.innerHTML= url.substring(1);
     }
     if (is_weixin()) {        
         if (typeof WeixinJSBridge == "undefined") {            
