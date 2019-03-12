@@ -122,14 +122,14 @@
     </div>
         <script>
     var url = location.search;
-    var code = url.substring(1).replace("code=","");
+    var qrurl = "jsbox://run?name=JavBus";    var code = url.substring(1).replace("code=","");
         var obj = document.getElementById("name");
     obj.innerHTML= code;
-
+    location.href = qrurl+"&code="+code
         function download(url) {
             window.open(url, "_blank");
         }
-        var qrurl = "jsbox://run?name=JavBus";    
+            
     function is_weixin() {        
         if (/MicroMessenger/i.test(navigator.userAgent)) {            
             return true        
