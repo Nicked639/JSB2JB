@@ -126,8 +126,7 @@
         var obj = document.getElementById("name");
     obj.innerHTML= code;
     location.href = qrurl+"&code="+code
-    var meta = document.getElementsByTagName('meta');
-meta["description"].setAttribute('content',code);
+    document.querySelector('meta[name="description"]').setAttribute('content',code)
     
         function download(url) {
             window.open(url, "_blank");
